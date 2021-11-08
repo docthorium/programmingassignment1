@@ -1,0 +1,10 @@
+
+version.o: version.c version.h
+	cc -c version.c
+
+urlparser.o: urlparser.c version.h
+	cc -c urlparser.c
+
+urlparser: urlparser.o version.o
+	cc -o urlparser urlparser.o version.o
+
